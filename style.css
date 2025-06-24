@@ -51,31 +51,72 @@ footer {
   padding: 1em;
 }
 
-/* Add gallery */
+
+/* ... (your existing styles) ... */
+
+#photography {
+  padding: 40px 20px;
+  text-align: center;
+}
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates a responsive grid */
-    gap: 15px; /* Space between photos */
-    padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust thumbnail size */
+  gap: 20px;
+  margin-top: 20px;
+  max-width: 900px; /* Optional: limit gallery width */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.gallery img {
-    width: 100%; /* Makes images fill their grid space */
-    height: 200px; /* Fixed height for consistency */
-    object-fit: cover; /* Crops images to fit the height without distortion */
-    border-radius: 8px; /* Slightly rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s ease; /* Smooth hover effect */
+.gallery-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Puts space between title and image if needed */
+  transition: transform 0.2s ease-in-out;
 }
 
-.gallery img:hover {
-    transform: scale(1.03); /* Slightly enlarge on hover */
+.gallery-item:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
 }
 
-/* Optional: Adjust for smaller screens */
-@media (max-width: 600px) {
-    .gallery {
-        grid-template-columns: 1fr; /* Stack images on very small screens */
-    }
+.gallery-item h3 {
+  background-color: #f8f8f8; /* Lighter background for title */
+  padding: 10px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width */
+  font-size: 1.1em;
+  color: #333;
 }
+
+.gallery-item a {
+    display: block; /* Make the whole area clickable for image */
+    width: 100%;
+    height: 200px; /* Fixed height for thumbnails */
+    overflow: hidden; /* Hide overflow if image is larger */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crop image to fit thumbnail container */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Zoom effect on image hover */
+}
+
+/* No need for video-container or iframe specific styles within the gallery item anymore */
+/* If you want to customize the lightbox itself, refer to Lightbox2 documentation */
+
+/* ... (your existing media queries) ... */
+
+/* ... tus otros estilos ... */

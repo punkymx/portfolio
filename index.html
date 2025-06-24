@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Miguel Colli - Portfolio</title>
   <link rel="stylesheet" href="style.css">
-</head>
+  <link href="lightbox/css/lightbox.min.css" rel="stylesheet" /> </head>
 <body>
   <header>
     <img src="assets/img/linked.JPG" alt="Foto de perfil" class="profile-pic">
@@ -13,7 +13,8 @@
     <p>Engineer Technollogist · Tech Support </p>
     <nav>
       <a href="#projects">Projects</a>
-      <a href="#photography">Photography</a> <a href="#skills">Skills</a>
+      <a href="#photography">Photography</a>
+      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -32,13 +33,33 @@
   ---
 
   <section id="photography">
-    <h2>Photography</h2>
+    <h2>Fotografía con Dron</h2>
+    <p>Haz clic en las miniaturas para ver las fotos y videos aéreos en detalle.</p>
+
     <div class="gallery">
-      <img src="assets/photos/photo1.jpg" alt="Description of Photo 1">
-      <img src="assets/photos/photo2.jpg" alt="Description of Photo 2">
-      <img src="assets/photos/photo3.jpg" alt="Description of Photo 3">
+      <div class="gallery-item">
+        <h3>Fotografía Aérea</h3>
+        <a href="assets/photos/photo1.jpg" data-lightbox="drone-gallery" data-title="Una vista aérea de la ciudad de Mérida.">
+          <img src="assets/photos/drone-photo-sample-thumb.jpg" alt="Miniatura de fotografía aérea con dron">
+        </a>
       </div>
-    <p>Check out more of my work on <a href="LINK_TO_YOUR_PHOTOGRAPHY_REPO_OR_PLATFORM" target="_blank">GitHub Photos</a> or <a href="LINK_TO_INSTAGRAM_OR_FLICKR" target="_blank">Instagram/Flickr</a>.</p>
+
+      <div class="gallery-item">
+        <h3>Video Aéreo</h3>
+        <a href="https://www.youtube.com/watch?v=3GPjnqp4zZY" target="_blank" data-title="Video aéreo mostrando los alrededores.">
+          <img src="assets/photos/drone-video-thumbnail.jpg" alt="Miniatura de video aéreo">
+        </a>
+      </div>
+
+      <div class="gallery-item">
+        <h3>Foto Panorámica 360°</h3>
+        <a href="https://kuula.co/share/YOUR_KUULA_EMBED_ID?logo=0&fs=1&vr=0&initload=0&thumbs=1" target="_blank" data-title="Vista panorámica interactiva de 360 grados.">
+          <img src="assets/photos/drone-360-thumbnail.jpg" alt="Miniatura de foto 360">
+        </a>
+      </div>
+    </div>
+
+    <p>Para ver más de mi trabajo, visita mi <a href="LINK_TO_YOUR_PHOTOGRAPHY_REPO_OR_PLATFORM" target="_blank">repositorio de fotografía</a> o sígueme en <a href="LINK_TO_INSTAGRAM_OR_FLICKR" target="_blank">Instagram/Flickr</a>.</p>
   </section>
 
   ---
@@ -63,5 +84,6 @@
   <footer>
     <p>© 2025 Miguel Colli - Personal portfolio</p>
   </footer>
-</body>
+
+  <script src="lightbox/js/lightbox-plus-jquery.min.js"></script> </body>
 </html>
